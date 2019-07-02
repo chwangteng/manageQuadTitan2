@@ -14,15 +14,15 @@ llp和wt的四卡泰坦说明文档
 ## Ubuntu系统
 
 ### 环境
-Ubuntu：16.04.6 LTS  
-Nvidia Driver:**to install**
-CUDA：**to install** 9.0  
-cuDNN：**to install** cuDNN v7.4.2 (Dec 14, 2018), for CUDA 9.0  
-IP：192.168.1.118
+Ubuntu：16.04.6 LTS   
+Nvidia Driver:**to install**  
+CUDA：**to install** 9.0    
+cuDNN：**to install** cuDNN v7.4.2 (Dec 14, 2018), for CUDA 9.0   
+IP：192.168.1.118  
 
 ### root 账户
-Username：byjw
-Password：byjw
+Username：byjw  
+Password：byjw  
 
 ### 个人的账户和密码（推荐通过SSH登录）
 Username：姓名首字母缩写（小写）  
