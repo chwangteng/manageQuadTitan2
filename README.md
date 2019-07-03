@@ -15,13 +15,14 @@ llp和wt的四卡泰坦说明文档
 
 ### 环境
 Ubuntu：16.04.6 LTS   
-Nvidia Driver:**to install**  
-CUDA：**to install** 9.0    
-cuDNN：**to install** cuDNN v7.4.2 (Dec 14, 2018), for CUDA 9.0   
-IP：192.168.1.118  
+Nvidia Driver: Additional Drivers 384.130
+CUDA：/usr/local/CUDA->/usr/local/CUDA-9.0  
+cuDNN：cuDNN v7.4.2 (Dec 14, 2018), for CUDA 9.0   
+IP：192.168.1.117  
+Teamviewer ID: 1320647794
 
-### root 账户
-Username：byjw  
+### byjw 账户
+Username：byjw   
 Password：byjw  
 
 ### 个人的账户和密码（推荐通过SSH登录）
@@ -29,7 +30,7 @@ Username：姓名首字母缩写（小写）
 Password：姓名全拼（小写）  
 请尽快修改密码  
 
-| 姓名 | 用户名 | 密码 | 组 | 初始路径 | sudo权限  |
+| 姓名 | 用户名 | 密码 | 组 | home路径 | sudo权限  |
 | ------ | ------ | ------ | ------ | ------ | ------ |
 | 王腾 | wt | wangteng | student | /home/wt | 是 |
 | 罗利鹏 | llp | luolipeng | student | /home/llp | 是 |
@@ -41,7 +42,7 @@ Password：姓名全拼（小写）
   更多用法参考[其他教程](https://blog.csdn.net/fang_chuan/article/details/82017470)
   
 2. 使用`conda`或 `pip`命令来创建和管理**你的环境**。  
-  **conda**：使用`conda create -n yourenvname python=pythonversion`命令创建属于你的python环境，例如`conda create -n wtkeras python=2.7`。 创建的环境路径位于`/home/root1root/anaconda3/envs/yourenvname/bin/python`。使用`conda env list`来查看目前存在和激活的的conda环境，使用`source activate yourenvname`来激活你的环境。安装GPU版的tf等框架建议使用pip命令，因为使用conda命令会自动下载对应的cuda和cudnn，不知道时候会有影响。（注：本机当前安装的驱动程序不支持cuda9.2及以上）关于conda、pip命令的更多使用方法，请参考其他教程。 
+  **conda**：使用`conda create -n yourenvname python=pythonversion`命令创建属于你的python环境，例如`conda create -n wtkeras python=2.7`。 创建的环境路径位于`/home/byjw/anaconda3/envs/yourenvname/bin/python`。使用`conda env list`来查看目前存在和激活的的conda环境，使用`source activate yourenvname`来激活你的环境。安装GPU版的tf等框架建议使用pip命令，因为使用conda命令会自动下载对应的cuda和cudnn，不知道时候会有影响。（注：本机当前安装的英伟达驱动程序不支持cuda9.2及以上）关于conda、pip命令的更多使用方法，请参考其他教程。 
     
 3.  在python中，务必在程序中加入如下代码来指定抢占的GPU，x为0或1或2或3或0,1或0,2等（一共四块，为0123），尽量不占用大量显卡。    
 ```python
@@ -73,13 +74,15 @@ watch -n 1 -d nvidia-smi
   下图为WinSCP的使用效果  
   ![图片无法加载](https://raw.githubusercontent.com/chwangteng/manageQuadTitan/master/winscp.png)  
     
-7.如果提示`libcublas.so.9.0: cannot open shared object file: No such file`的话，试一下在自己目录下的`./bashrc` 中末尾添加 `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64/` 然后执行 `source  ~/.bashrc` 一般可以解决。下次运行还会报错，只要执行那条source命令即可，我也不知道为啥。。。。求高人指点。在Pycharm中运行时，将 `LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64/`添加到运行配置的环境变量中即可 。另外，有一位Mac用户需要在Pycharm的configuration中的环境变量中加上LD_LIBRARY_PATH，使用mac的同学注意一下。  
+7.在自己home目录下的`./bashrc` 中末尾添加。在Pycharm中运行时，将 `LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64/`添加到运行配置的环境变量中即可 。另外，有一位Mac用户需要在Pycharm的configuration中的环境变量中加上LD_LIBRARY_PATH，使用mac的同学注意一下。  
 使用nvcc使用下面三行命令
 ```linux
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64
 export PATH=$PATH:/usr/local/cuda-9.0/bin
 export CUDA_HOME=$CUDA_HOME:/usr/local/cuda-9.0
 ```
+或者使用8.0版，然后执行 `source  ~/.bashrc` 。注意cuda和cuda-8.0或者cuda-9.0之间是有软链接的，安装cudnn的时候拷贝文件时务必注意。
+
 
 8.Windows下PUTTY+Xming实现远程程序窗口转发[教程](https://blog.csdn.net/u013554213/article/details/79885792)，可用于查看程序popup的图片视频等。  
 
