@@ -21,6 +21,7 @@ cuDNN：cuDNN v7.4.2 (Dec 14, 2018), for CUDA 9.0
 IP：192.168.1.117  
 Teamviewer ID: 1320647794
 Anaconda: /usr/local/anaconda3
+4T机械硬盘挂载目录:/mnt/4T
 
 ### byjw 账户
 Username：byjw   
