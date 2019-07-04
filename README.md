@@ -83,7 +83,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64
 export PATH=$PATH:/usr/local/cuda-9.0/bin
 export CUDA_HOME=$CUDA_HOME:/usr/local/cuda-9.0
 ```
-或者使用8.0版，然后执行 `source  ~/.bashrc` 。注意cuda和cuda-8.0或者cuda-9.0之间是有软链接的，安装cudnn的时候拷贝文件时务必注意。
+或者使用8.0版，然后执行 `source  ~/.bashrc` 。注意cuda和cuda-8.0或者cuda-9.0之间是有软链接的，安装cudnn的时候拷贝文件时务必注意,不要跟着教程命令盲目拷贝。
 
 
 8.Windows下PUTTY+Xming实现远程程序窗口转发[教程](https://blog.csdn.net/u013554213/article/details/79885792)，可用于查看程序popup的图片视频等。  
