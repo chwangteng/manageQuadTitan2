@@ -16,10 +16,11 @@ llp和wt的四卡泰坦说明文档
 ### 环境
 Ubuntu：16.04.6 LTS   
 Nvidia Driver: Additional Drivers 384.130
-CUDA：/usr/local/CUDA->/usr/local/CUDA-9.0  
+CUDA：/usr/local/CUDA->/usr/local/CUDA-8.0  /usr/local/CUDA-9.0  
 cuDNN：cuDNN v7.4.2 (Dec 14, 2018), for CUDA 9.0   
 IP：192.168.1.117  
 Teamviewer ID: 1320647794
+Anaconda: /usr/local/anaconda3
 
 ### byjw 账户
 Username：byjw   
