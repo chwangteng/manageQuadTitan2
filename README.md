@@ -44,7 +44,7 @@ Password：姓名全拼（小写）
 ## 注意
 0. 由于服务器共享使用，请不要随意重启服务器以免带来不必要的麻烦。  
 
-1. 如果有必要，使用形如`nohup python -u trian.py &`命令保证进程不间断运行（如断开SSH连接等），`-u`可加可不加，它能保证python程序的输出可以无缓存、及时地更新到nohup.out文件中，对于不会主动关闭的进程，训练后使用`kill`。  
+1. 如果有必要，使用形如`nohup python -u trian.py &`命令保证进程不间断运行（如断开SSH连接等），`-u`可加可不加，它能保证python程序的输出可以无缓存、及时地更新到nohup.out文件中，对于不会主动关闭的进程，训练后使用`kill`。  使用`nohup python -u trian.py > customfileout.txt 2>&1 &`形如这样的命令来指定输出文件名，21是标准输出流和错误流。
   更多用法参考[其他教程](https://blog.csdn.net/fang_chuan/article/details/82017470)
   
 2. 使用`conda`或 `pip`命令来创建和管理**你的环境**。  
