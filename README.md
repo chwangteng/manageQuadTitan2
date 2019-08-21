@@ -23,9 +23,12 @@ Teamviewer ID: 1320647794
 Anaconda: /usr/local/anaconda3  
 4T机械硬盘挂载目录:/mnt/4T  
 
-### byjw 账户
+### byjw 公共账户
 Username：byjw   
 Password：byjw  
+
+### root 账户   
+Password：root 
 
 ### 个人的账户和密码（推荐通过SSH登录）
 Username：姓名首字母缩写（小写）  
@@ -36,6 +39,7 @@ Password：姓名全拼（小写）
 | ------ | ------ | ------ | ------ | ------ | ------ |
 | 王腾 | wt | wangteng | student | /home/wt | 是 |
 | 罗利鹏 | llp | luolipeng | student | /home/llp | 是 |
+| 费帅 | fs | 未知 | 未知 | /home/fs | 是 |
 
 ## 注意
 0. 由于服务器共享使用，请不要随意重启服务器以免带来不必要的麻烦。  
